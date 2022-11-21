@@ -1,0 +1,105 @@
+version: "3.9"
+services:
+  node1:
+    build:
+      context: .
+      dockerfile: ./docker/geth-signer/Dockerfile
+    volumes:
+      - type: bind
+        source: ./privatenet/nodes/node1
+        target: /root/.ethereum
+      - type: bind
+        source: ./privatenet/static-nodes.json
+        target: /root/.ethereum/static-nodes.json
+      - type: bind
+        source: ./docker/geth-signer/accounts/password.txt
+        target: /root/.ethereum/password.txt
+      - type: bind
+        source: ./docker/geth-signer/accounts/UTC--2022-11-21T00-08-39.501620000Z--2842d8c1f3dc36394337e8289c63634f8b77f0ae
+        target: /root/.ethereum/keystore/UTC--2022-11-21T00-08-39.501620000Z--2842d8c1f3dc36394337e8289c63634f8b77f0ae
+      - type: bind
+        source: ./docker/geth-signer/entrypoint.sh
+        target: /root/.ethereum/entrypoint.sh
+    ports:
+      - "8545:8545"
+      - "8546:8546"
+  node2:
+    build:
+      context: .
+      dockerfile: ./docker/geth-signer/Dockerfile
+    volumes:
+      - type: bind
+        source: ./privatenet/nodes/node2
+        target: /root/.ethereum
+      - type: bind
+        source: ./privatenet/static-nodes.json
+        target: /root/.ethereum/static-nodes.json
+      - type: bind
+        source: ./docker/geth-signer/accounts/password.txt
+        target: /root/.ethereum/password.txt
+      - type: bind
+        source: ./docker/geth-signer/accounts/UTC--2022-11-21T10-07-06.412787800Z--028ecca16c68db66f21d5dacd0133cca88017d4e
+        target: /root/.ethereum/keystore/UTC--2022-11-21T10-07-06.412787800Z--028ecca16c68db66f21d5dacd0133cca88017d4e
+      - type: bind
+        source: ./docker/geth-signer/entrypoint.sh
+        target: /root/.ethereum/entrypoint.sh
+    ports:
+      - "18545:8545"
+      - "18546:8546"
+  node3:
+    build:
+      context: .
+      dockerfile: ./docker/geth-signer/Dockerfile
+    volumes:
+      - type: bind
+        source: ./privatenet/nodes/node3
+        target: /root/.ethereum
+      - type: bind
+        source: ./privatenet/static-nodes.json
+        target: /root/.ethereum/static-nodes.json
+      - type: bind
+        source: ./docker/geth-signer/accounts/password.txt
+        target: /root/.ethereum/password.txt
+      - type: bind
+        source: ./docker/geth-signer/accounts/UTC--2022-11-21T10-07-15.284193800Z--0f572801a9f025eabf5d0df2c6ccc83e615faeb6
+        target: /root/.ethereum/keystore/UTC--2022-11-21T10-07-15.284193800Z--0f572801a9f025eabf5d0df2c6ccc83e615faeb6
+      - type: bind
+        source: ./docker/geth-signer/entrypoint.sh
+        target: /root/.ethereum/entrypoint.sh
+    ports:
+      - "28545:8545"
+      - "28546:8546"
+  node4:
+    build:
+      context: .
+      dockerfile: ./docker/geth/Dockerfile
+    volumes:
+      - type: bind
+        source: ./privatenet/nodes/node4
+        target: /root/.ethereum
+      - type: bind
+        source: ./privatenet/static-nodes.json
+        target: /root/.ethereum/static-nodes.json
+      - type: bind
+        source: ./docker/geth/entrypoint.sh
+        target: /root/.ethereum/entrypoint.sh
+    ports:
+      - "38545:8545"
+      - "38546:8546"
+  node5:
+    build:
+      context: .
+      dockerfile: ./docker/geth/Dockerfile
+    volumes:
+      - type: bind
+        source: ./privatenet/nodes/node5
+        target: /root/.ethereum
+      - type: bind
+        source: ./privatenet/static-nodes.json
+        target: /root/.ethereum/static-nodes.json
+      - type: bind
+        source: ./docker/geth/entrypoint.sh
+        target: /root/.ethereum/entrypoint.sh
+    ports:
+      - "48545:8545"
+      - "48546:8546"

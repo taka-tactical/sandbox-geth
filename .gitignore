@@ -1,0 +1,6 @@
+.idea/
+.vscode/
+privatenet/genesis.json
+privatenet/static-nodes.json
+privatenet/nodes/*
+!privatenet/nodes/.gitkeep
