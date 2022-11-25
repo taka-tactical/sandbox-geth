@@ -6,15 +6,36 @@ Sandbox for geth private network (POA) built on docker.
 
 ## Requirement
 
-- Bash, make
-  - Windows
-    - MSYS, cygwin, etc ...
-  - macOS
-    - Install from Homebrew
-- Docker 20.*
-- Docker Compose 2.*
+- bash
+- make
+- Docker
+- Docker Compose v2
 - Go Ethereum (Geth) 1.10
   - "Geth & Tools" archive version required, not an installer version
+
+## Setup
+
+### bash, make
+
+- Windows
+  - Install MSYS | MinGW | cygwin or similar software
+- macOS
+  - bash: `chsh -s /bin/bash`
+  - make: Install from Homebrew
+
+### Docker, Docker compose
+
+Recommended:
+- Docker Desktop
+- Rancher Desktop
+
+Or similar software.
+
+### Go Ethereum
+
+1. Download "Geth & Tools" archive package from [here](https://geth.ethereum.org/downloads/).
+2. Extract package to destination directory
+3. Create a path
 
 ## Usage
 
@@ -24,7 +45,7 @@ make init
 make setup
 ```
 
-### Attach geth
+### Attach
 
 ```shell
 geth attach http://127.0.0.1:8545
@@ -54,15 +75,13 @@ USAGE:
 
 COMMANDS:
   genesis   Create genesis.json setting (launch puppeth binary)
+  build     Build docker containers
   init      Initialize nodes
   setup     Build docker containers and start network
   start     Start network
   stop      Stop neiwork
   status    Show docker containers status
   clean     Destroy and clean up network
-  check     Check required binaries exists or not
-  test      Check network initialized or not
-  build     Build docker containers
 ```
 
 ### Available API modules
