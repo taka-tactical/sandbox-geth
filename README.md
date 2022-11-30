@@ -18,7 +18,7 @@ Sandbox for geth private network (POA) built on docker.
 ### bash, make
 
 - Windows
-  - Install MSYS | MinGW | cygwin or similar software
+  - Install MSYS2 or MinGW or cygwin or similar software
 - macOS
   - bash: `chsh -s /bin/bash`
   - make: Install from Homebrew
@@ -31,7 +31,7 @@ Recommended:
 
 Or similar software.
 
-### Go Ethereum
+### Go Ethereum (geth)
 
 1. Download "Geth & Tools" archive package from [here](https://geth.ethereum.org/downloads/).
 2. Extract package to destination directory
@@ -39,8 +39,12 @@ Or similar software.
 
 ## Usage
 
-### Initialize nodes and start POA network 
+### Initialize nodes and start POA network
+
 ```shell
+git clone "this-repository" /path/to/dest
+cd /path/to/dest
+
 make init
 make setup
 ```
@@ -58,6 +62,23 @@ geth attach http://127.0.0.1:8545
 |  3   |  28545   |  28546  |  Yes   |
 |  4   |  38545   |  38546  |   No   |
 |  5   |  48545   |  48546  |   No   |
+
+### Execute command(s)
+
+```javascript
+Welcome to the Geth JavaScript console!
+...
+To exit, press ctrl-d or type exit
+>
+> eth.mining
+true
+> eth.blockNumber
+3
+> eth.blockNumber
+4
+> admin.peers
+[{ ... }]
+```
 
 ### Destroy network
 
@@ -95,6 +116,19 @@ miner
 txpool
 admin
 debug
+```
+
+### Structure
+
+```
+.
+├── docker              (Docker container definitions)
+├── privatenet          (Definition and data of ethereum nodes)
+├── utilities           (Scripts to init|create network)
+├── docker-compose.yml  (Docker compose definition)
+├── Makefile            (Launcher with make command)
+├── README.md           (This file)
+└── README_ja.md        (README in Japanese)
 ```
 
 ## Reference
