@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  solc:
+    build:
+      context: .
+      dockerfile: ../docker/solc/Dockerfile
+    working_dir: /app
+    volumes:
+      - type: bind
+        source: ./src
+        target: /app

@@ -2,6 +2,7 @@
 check:
 	@utilities/check_requirements.sh
 
+.PHONY: test
 test:
 	@utilities/check_prepared.sh
 
@@ -16,6 +17,7 @@ genesis: check
 init: check
 	utilities/init_nodes.sh
 
+.PHONY: build
 build:
 	docker compose build --no-cache --force-rm
 
@@ -35,6 +37,7 @@ stop:
 status:
 	docker compose ps
 
+.PHONY: clean
 clean:
 	docker compose down --rmi all --volumes --remove-orphans
 	rm -f privatenet/static-nodes.json privatenet/genesis.json
