@@ -90,7 +90,7 @@ const deployed_one = contract.new(tx)
 
 以下をタイプして address が空でなければデプロイ成功（＝マイニングされた）となります。
 address の値はスマートコントラクトの実行に必要なので手元に控えておいてください。
-```
+```javascript
 > deployed_one
 
 {
