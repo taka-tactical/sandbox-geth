@@ -10,6 +10,11 @@ gethを使用したイーサリアムのプライベートネットワーク（P
 
 ## 事前準備・セットアップ
 
+git pull を行いソースコードを最新化しておく
+
+以下を実行して、サブモジュールを含んだリポジトリをクローンします
+git submodule update --init --recursive 
+
 ### Ethereumネットワーク
 
 当プロジェクトのrootディレクトリにある [README_ja](../README_ja.md) を参照してPOAネットワークを作成・起動してください。
