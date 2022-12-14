@@ -1,10 +1,10 @@
 .PHONY: check
 check:
-	@utilities/check_requirements.sh
+	@bash ./utilities/check_requirements.sh
 
 .PHONY: test
 test:
-	@utilities/check_prepared.sh
+	@bash ./utilities/check_prepared.sh
 
 .PHONY: genesis
 genesis: check
@@ -15,7 +15,7 @@ genesis: check
 
 .PHONY: init
 init: check
-	utilities/init_nodes.sh
+	bash ./utilities/init_nodes.sh
 
 .PHONY: build
 build:
