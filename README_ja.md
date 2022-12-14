@@ -4,6 +4,8 @@
 
 gethを使用したイーサリアムのプライベートネットワーク（POA）を作成可能な箱庭環境。
 
+\* English version of README is [here](./README.md).
+
 ## システム要件
 
 - bash シェルを動かせること

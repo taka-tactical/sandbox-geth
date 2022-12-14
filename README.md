@@ -4,6 +4,8 @@
 
 Sandbox for geth private network (POA) built on docker.
 
+\* Japanese version of README is [here](./README_ja.md).
+
 ## Requirement
 
 - bash
