@@ -10,10 +10,13 @@ gethを使用したイーサリアムのプライベートネットワーク（P
 
 ## 事前準備・セットアップ
 
-git pull を行いソースコードを最新化しておく
+`git pull` を行いソースコードを最新化しておく。
+以下を実行してサブモジュールを含んだリポジトリを最新化しておく。
 
-以下を実行して、サブモジュールを含んだリポジトリをクローンします
-git submodule update --init --recursive 
+```shell
+cd "プロジェクトのrootディレクトリ"
+git submodule update --init --recursive
+```
 
 ### Ethereumネットワーク
 
