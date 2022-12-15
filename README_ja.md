@@ -49,8 +49,7 @@ gethを使用したイーサリアムのプライベートネットワーク（P
 submoduleを使用しているので `--recursive` オプションは必須。
 
 ```shell
-# cloning via SSH
-git clone --recursive "this-repository" /path/to/dest
+git clone --recursive "this-repository-uri" /path/to/dest
 ```
 
 ### ノードの初期化とプライベートネットワーク（POA）の起動

@@ -46,8 +46,7 @@ Or similar software.
 `--recursive` option is required because submodule is used.
 
 ```shell
-# cloning via SSH
-git clone --recursive "this-repository" /path/to/dest
+git clone --recursive "this-repository-uri" /path/to/dest
 ```
 
 ### Initialize nodes and start POA network
