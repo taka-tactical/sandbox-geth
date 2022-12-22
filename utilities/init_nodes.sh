@@ -1,17 +1,25 @@
 #!/bin/bash -e
 
 # config
+CURDIR=$(pwd)
 SYSDIR=$(cd "$(dirname "$0")"; pwd | xargs dirname)
-NETDIR="${SYSDIR}/privatenet"
+NETDIR="./privatenet"
 
 FILE_GENESIS="${NETDIR}/genesis.json"
 FILE_PEERS="${NETDIR}/static-nodes.json"
 
+# change directory
+if ! [ "$CURDIR" == "$SYSDIR" ]; then
+  echo ""
+  echo "change directory: ${SYSDIR}"
+  cd "$SYSDIR"
+fi
+
+# init node 1 - 5
 if ! [ -f "${FILE_GENESIS}" ]; then
   cp -f "${SYSDIR}/docker/geth/genesis-poa.json" "${FILE_GENESIS}"
 fi
 
-# init node 1 - 5
 DELIM=","
 echo "[" > "$FILE_PEERS"
 
