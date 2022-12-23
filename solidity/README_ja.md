@@ -201,6 +201,7 @@ COMMANDS:
 
 - [スマートコントラクト入門](https://tech.isid.co.jp/entry/2022/01/17/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%82%B3%E3%83%B3%E3%83%88%E3%83%A9%E3%82%AF%E3%83%88%E5%85%A5%E9%96%80)
 - [【Solidity入門】まず最初にSolidityで覚えるべき基本構文まとめ](https://qiita.com/sho11hei12-1998/items/31ed7c5d4c2f34409223)
+- [Windows Terminal で Cygwin Bash を表示したい](https://qiita.com/yokra9/items/e8b184021091dbabb8a1)
 
 ## 作者
 
