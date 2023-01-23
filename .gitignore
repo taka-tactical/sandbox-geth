@@ -1,5 +1,6 @@
 .idea/
 .vscode/
+.deps/
 privatenet/genesis.json
 privatenet/static-nodes.json
 privatenet/nodes/*
