@@ -1,3 +1,3 @@
-[submodule "solidity/src/lib/solidity-stringutils"]
-	path = solidity/src/lib/solidity-stringutils
+[submodule "solidity/1_hello_world/src/lib/solidity-stringutils"]
+	path = solidity/1_hello_world/src/lib/solidity-stringutils
 	url = https://github.com/Arachnid/solidity-stringutils.git

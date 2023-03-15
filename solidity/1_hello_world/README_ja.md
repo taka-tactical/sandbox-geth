@@ -27,7 +27,7 @@ git submodule update --init --recursive
 
 ### Ethereumネットワーク
 
-当プロジェクトのrootディレクトリにある [README_ja](../README_ja.md) を参照してPOAネットワークを作成・起動してください。
+当プロジェクトのrootディレクトリにある [README_ja](../../README_ja.md) を参照してPOAネットワークを作成・起動してください。
 
 ## 利用手順
 
@@ -37,7 +37,7 @@ bashシェル上で次のコマンドを実行。
 
 ```shell
 cd "プロジェクトのrootディレクトリ"
-cd solidity
+cd solidity/1_hello_world/
 make build_hello
 ```
 
@@ -181,7 +181,7 @@ instance.sayHello.call()
 make destroy
 ```
 
-POAネットワークも削除する場合は [こちら](../README_ja.md) を参照してください。
+POAネットワークも削除する場合は [こちら](../../README_ja.md) を参照してください。
 
 ## 機能詳細
 

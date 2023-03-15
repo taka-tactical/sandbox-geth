@@ -3,7 +3,7 @@ services:
   solc:
     build:
       context: .
-      dockerfile: ../docker/solc/Dockerfile
+      dockerfile: ../../docker/solc/Dockerfile
     working_dir: /app
     volumes:
       - type: bind
