@@ -11,10 +11,10 @@ var networks = {
   },
 };
 
-if (process.env.GOERLI_API_URL !== '' && process.env.GOERLI_PRIVATE_KEY !== '') {
-  networks['goerli'] = {
-    url: process.env.GOERLI_API_URL,
-    accounts: [`0x${process.env.GOERLI_PRIVATE_KEY}`],
+if (process.env.SEPOLIA_API_URL !== '' && process.env.SEPOLIA_PRIVATE_KEY !== '') {
+  networks['sepolia'] = {
+    url: process.env.SEPOLIA_API_URL,
+    accounts: [`0x${process.env.SEPOLIA_PRIVATE_KEY}`],
   };
 }
 
