@@ -8,11 +8,12 @@ import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol";
 
-contract TestNfToken is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable, Ownable, ERC721Burnable {
-    constructor() ERC721("TestNfToken", "TNT") {}
+contract NukoNfToken is ERC721, ERC721Enumerable, ERC721URIStorage, Pausable, Ownable, ERC721Burnable {
+    constructor() ERC721("NukoNfToken", "NUKO") {}
 
     function _baseURI() internal pure override returns (string memory) {
-        return "https://place/your/ipfs/path";
+        // Use ipfs test gateway (Do not use in a service environment)
+        return "https://ipfs.io/ipfs/";
     }
 
     function pause() public onlyOwner {

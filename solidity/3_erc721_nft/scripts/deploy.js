@@ -11,16 +11,16 @@ async function main() {
   // 引数付きで Lock.deploy() メソッドを呼ぶと「too many arguments」と怒られるので引数付けない方が良い模様。
   // https://qiita.com/FinanceMofumofu/items/a46488333fbee819bb01
   //
-  const factory = await hre.ethers.getContractFactory("TestNfToken");
-  const tnt = await factory.deploy();
+  const factory = await hre.ethers.getContractFactory("NukoNfToken");
+  const nft = await factory.deploy();
 
   // デプロイ実行
-  await tnt.deployed();
+  await nft.deployed();
 
   // コントラクトアドレス
-  console.log("\nDeployed contracts address:", tnt.address);
+  console.log("\nDeployed contracts address:", nft.address);
   // トランザクションハッシュ（TXアドレス）
-  console.log("\nDeployed hash (tx hash) is:", tnt.deployTransaction.hash, "\n");
+  console.log("\nDeployed hash (tx hash) is:", nft.deployTransaction.hash, "\n");
 }
 
 // We recommend this pattern to be able to use async/await everywhere
