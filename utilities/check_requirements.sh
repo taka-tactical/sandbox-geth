@@ -18,10 +18,4 @@ if ! (type bootnode > /dev/null 2>&1); then
   exit 1
 fi
 
-if ! (type puppeth > /dev/null 2>&1); then
-  echo "puppeth binary not found"
-  echo ""
-  exit 1
-fi
-
 exit 0

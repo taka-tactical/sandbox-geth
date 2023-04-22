@@ -8,13 +8,6 @@ test:
 	@@chmod u+x ./utilities/check_prepared.sh
 	@./utilities/check_prepared.sh
 
-.PHONY: genesis
-genesis: check
-	@echo ""
-	@echo "*** puppeth は CTRL+D しないと抜けられないので必ず makeエラー になるが気にしないでOK ***"
-	@echo ""
-	puppeth --network genesis
-
 .PHONY: init
 init: check
 	@chmod u+x ./utilities/init_nodes.sh
